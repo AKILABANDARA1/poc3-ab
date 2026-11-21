@@ -6,7 +6,7 @@ from flask import Flask, jsonify, request, send_file
 
 app = Flask(__name__)
 
-UPLOAD_DIR = Path("uploads")
+UPLOAD_DIR = Path("/tmp")
 UPLOAD_DIR.mkdir(exist_ok=True)
 
 
@@ -91,4 +91,4 @@ def run():
 
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=8080)
+    app.run(host="0.0.0.0", port=8000)
